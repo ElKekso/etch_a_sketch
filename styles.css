@@ -3,6 +3,12 @@
     flex-flow: row wrap;
     width: 160px;
     height: 160px;
+    background-color: black;
+
+    box-sizing: content-box;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid
 }
 
 .square{
@@ -12,13 +18,19 @@
     margin: 0;
     padding: 0;
 
-    /* just for creating grid */
+    opacity: 1;
+
+    /* remove comment signs for border
+
     box-sizing: border-box ;
     border-width: 2px;
     border-style: solid;
-    border-color: black;
-    background-color: purple;
+    border-color: rgb(0,0,0);
+    
+    */
+    background-color: white;
 
+    /*makes square unselectable*/
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;

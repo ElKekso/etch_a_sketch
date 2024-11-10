@@ -33,10 +33,13 @@ function colorTarget(e)
     let opacity = Number(cStyle.getPropertyValue("opacity"));
     console.log(opacity);
 
-    if(opacity > 0)
-        opacity -= 0.1;
-    
-    target.setAttribute("style", `background-color:rgb(${red}, ${green}, ${blue}); opacity: ${opacity}`);
+    if(target.id != "grid")
+    {
+        if(opacity > 0)
+            opacity -= 0.1;
+        
+        target.setAttribute("style", `background-color:rgb(${red}, ${green}, ${blue}); opacity: ${opacity}`);
+    }
 }
 
 grid.addEventListener("mousedown", function () 
