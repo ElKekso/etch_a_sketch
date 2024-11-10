@@ -17,10 +17,19 @@ function createGrid(size)
 
 createGrid(16);
 
+function getRandom256()
+{
+    return Math.floor(Math.random() * 256);
+}
+
 function colorTarget(e)
 {
     const target = e.target;
-    target.classList.add("colored");
+    let red = getRandom256();
+    let green = getRandom256();
+    let blue = getRandom256();
+    
+    target.setAttribute("style", "background-color:rgb(" + red + "," + green + "," + blue + ");");
 }
 
 grid.addEventListener("mousedown", function () 
@@ -48,6 +57,6 @@ btn_reset.addEventListener("click", function ()
     }
     grid.replaceChildren();
     let grid_size = size * 10; 
-    grid.setAttribute("style", "height:" + grid_size + "px;width:" + grid_size + "px");
+    grid.setAttribute("style", "height:" + grid_size + "px;width:" + grid_size + "px;");
     createGrid(size);
 });
