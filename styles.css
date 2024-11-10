@@ -14,4 +14,12 @@
 
     /* just for creating grid */
     box-sizing: border-box ;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: purple;
+}
+
+.square:hover{
+    background-color: blue;
 }
