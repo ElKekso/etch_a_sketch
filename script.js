@@ -28,8 +28,15 @@ function colorTarget(e)
     let red = getRandom256();
     let green = getRandom256();
     let blue = getRandom256();
+
+    const cStyle = getComputedStyle(target);
+    let opacity = Number(cStyle.getPropertyValue("opacity"));
+    console.log(opacity);
+
+    if(opacity > 0)
+        opacity -= 0.1;
     
-    target.setAttribute("style", "background-color:rgb(" + red + "," + green + "," + blue + ");");
+    target.setAttribute("style", `background-color:rgb(${red}, ${green}, ${blue}); opacity: ${opacity}`);
 }
 
 grid.addEventListener("mousedown", function () 
