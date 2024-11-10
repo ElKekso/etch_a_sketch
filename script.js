@@ -39,10 +39,11 @@ const btn_reset = document.querySelector("#reset");
 
 btn_reset.addEventListener("click", function ()
 {
+    let size = 0;
     while(true)
     {
-        let size = prompt("Enter the size for the column and rows:");
-        if(size instanceof Number && size > 0 && size < 10000)
+        size = prompt("Enter the size for the column and rows:");
+        if((typeof Number(size) === 'number') && size <= 100 && size > 0)
             break;
     }
     grid.replaceChildren();
