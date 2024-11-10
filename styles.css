@@ -41,3 +41,20 @@
 .colored{
     background-color: black;
 }
+
+body{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+#reset{
+    font-family: Roboto;
+    font-size: large;
+    background-color: lightcoral;
+    color: black;
+    border-radius: 10px;
+}
